@@ -8,9 +8,3 @@ It also accepts requests for a:
 - luminosity (e.g. light or dark)
 
 and then generate random colors that match those choices.
-
-A few examples:
-
-![Code example](https://user-images.githubusercontent.com/1935696/92607675-b56bd700-f2b4-11ea-9085-67af9369fa71.png)
-
-![Code example](https://user-images.githubusercontent.com/1935696/92607766-daf8e080-f2b4-11ea-9d6d-3bd8501da443.png)
