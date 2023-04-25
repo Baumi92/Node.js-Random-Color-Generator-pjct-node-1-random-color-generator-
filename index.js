@@ -1,4 +1,6 @@
+// eslint-disable-next-line import/no-unresolved
 import kuler from 'kuler';
+// eslint-disable-next-line import/no-unresolved
 import randomColor from 'randomcolor';
 
 // Prints the result in the required pattern
