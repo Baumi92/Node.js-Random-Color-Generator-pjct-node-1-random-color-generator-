@@ -1,31 +1,24 @@
-// eslint-disable-next-line import/no-unresolved
-import kuler from 'kuler';
-// eslint-disable-next-line import/no-unresolved
+import chalk from 'chalk';
 import randomColor from 'randomcolor';
 
-// Prints the result in the required pattern
-
-function printResult(color) {
-  const fullLine = kuler('#'.repeat(31), color);
-  const partLine = kuler('#'.repeat(5), color);
-  const partSpace5 = kuler(' '.repeat(5), color);
-  const partSpace7 = kuler(' '.repeat(7), color);
-
-  console.log(`${fullLine}
-${fullLine}
-${fullLine}
-${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
-${partLine} ${partSpace5} ${kuler(color, color)} ${partSpace5} ${partLine}
-${partLine} ${partSpace5} ${partSpace7} ${partSpace5} ${partLine}
-${fullLine}
-${fullLine}
-${fullLine}`);
-}
-
-// Randomly generates color depending on user input and then print it
+const hue = process.argv[2];
+const luminosity = process.argv[3];
 
 const color = randomColor({
-  luminosity: process.argv[3],
-  hue: process.argv[2],
+  luminosity: luminosity,
+  hue: hue,
 });
-printResult(color);
+
+const log = console.log;
+chalk.level = 1;
+log(chalk.yellow('Welcome to the app'));
+
+console.log(chalk.hex(color).bold('###############################'));
+console.log(chalk.hex(color).bold('###############################'));
+console.log(chalk.hex(color).bold('###############################'));
+console.log(chalk.hex(color).bold('#####                     #####'));
+console.log(chalk.hex(color).bold(`#####       ${color}       #####`));
+console.log(chalk.hex(color).bold('#####                     #####'));
+console.log(chalk.hex(color).bold('###############################'));
+console.log(chalk.hex(color).bold('###############################'));
+console.log(chalk.hex(color).bold('###############################'));
